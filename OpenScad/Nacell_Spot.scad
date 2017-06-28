@@ -79,6 +79,10 @@ module nacelle() {
         translate([0,-(spot_lo/2+epstruct/2),spot_h-(daxes+2*epstruct)/2]) 
             rotate([90,0,0])
                 cylinder(h=4*epstruct, d=daxes, center=true, $fn=100); 
+        // Ouverture pour accéder à Power
+        hole_la=10;
+        translate([-hole_la/2, spot_lo/2,-spot_h/2+epstruct])
+            cube([hole_la, 2*epstruct, 5]);
     }
     
     translate([0,spot_lo/2+epstruct/2,spot_h-(daxes+2*epstruct)/2]) 
